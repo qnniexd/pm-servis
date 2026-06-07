@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as VozovyParkRouteImport } from './routes/vozovy-park'
 import { Route as SluzbyRouteImport } from './routes/sluzby'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as KontaktRouteImport } from './routes/kontakt'
 import { Route as IndexRouteImport } from './routes/index'
 
@@ -22,6 +23,11 @@ const VozovyParkRoute = VozovyParkRouteImport.update({
 const SluzbyRoute = SluzbyRouteImport.update({
   id: '/sluzby',
   path: '/sluzby',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
 const KontaktRoute = KontaktRouteImport.update({
@@ -38,12 +44,14 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/kontakt': typeof KontaktRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sluzby': typeof SluzbyRoute
   '/vozovy-park': typeof VozovyParkRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/kontakt': typeof KontaktRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sluzby': typeof SluzbyRoute
   '/vozovy-park': typeof VozovyParkRoute
 }
@@ -51,20 +59,28 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/kontakt': typeof KontaktRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sluzby': typeof SluzbyRoute
   '/vozovy-park': typeof VozovyParkRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/kontakt' | '/sluzby' | '/vozovy-park'
+  fullPaths: '/' | '/kontakt' | '/sitemap.xml' | '/sluzby' | '/vozovy-park'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/kontakt' | '/sluzby' | '/vozovy-park'
-  id: '__root__' | '/' | '/kontakt' | '/sluzby' | '/vozovy-park'
+  to: '/' | '/kontakt' | '/sitemap.xml' | '/sluzby' | '/vozovy-park'
+  id:
+    | '__root__'
+    | '/'
+    | '/kontakt'
+    | '/sitemap.xml'
+    | '/sluzby'
+    | '/vozovy-park'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   KontaktRoute: typeof KontaktRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   SluzbyRoute: typeof SluzbyRoute
   VozovyParkRoute: typeof VozovyParkRoute
 }
@@ -83,6 +99,13 @@ declare module '@tanstack/react-router' {
       path: '/sluzby'
       fullPath: '/sluzby'
       preLoaderRoute: typeof SluzbyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/kontakt': {
@@ -105,6 +128,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   KontaktRoute: KontaktRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
   SluzbyRoute: SluzbyRoute,
   VozovyParkRoute: VozovyParkRoute,
 }
