@@ -1,0 +1,143 @@
+import { useState } from "react";
+import { createFileRoute } from "@tanstack/react-router";
+import { Phone, Mail, MapPin } from "lucide-react";
+import { SiteLayout } from "@/components/SiteLayout";
+import { company } from "@/data/site";
+
+export const Route = createFileRoute("/kontakt")({
+  head: () => ({
+    meta: [
+      { title: "Kontakt a poptávka — PM-servis" },
+      {
+        name: "description",
+        content:
+          "Kontaktujte PM-servis a získejte nezávaznou cenovou nabídku na autobusovou dopravu. Telefon, e-mail a poptávkový formulář.",
+      },
+      { property: "og:title", content: "Kontakt a poptávka — PM-servis" },
+      {
+        property: "og:description",
+        content: "Pošlete nám nezávaznou poptávku — připravíme kalkulaci na míru.",
+      },
+    ],
+  }),
+  component: ContactPage,
+});
+
+function ContactPage() {
+  const [sent, setSent] = useState(false);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setSent(true);
+  };
+
+  return (
+    <SiteLayout>
+      <section className="bg-navy py-16 text-primary-foreground lg:py-24">
+        <div className="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-2 lg:px-12">
+          <div>
+            <span className="mb-6 inline-block rounded bg-gold/20 px-3 py-1 text-xs font-bold uppercase tracking-widest text-gold">
+              Nezávazná poptávka
+            </span>
+            <h1 className="mb-6 text-4xl font-bold leading-tight lg:text-5xl">
+              Plánujete cestu? Napište nám.
+            </h1>
+            <p className="mb-10 max-w-md leading-relaxed text-primary-foreground/70">
+              Náš tým je připraven sestavit vám individuální cenovou nabídku na míru
+              vašim požadavkům. Ozveme se vám co nejdříve.
+            </p>
+
+            <div className="space-y-5">
+              <a
+                href={`tel:${company.phone.replace(/\s/g, "")}`}
+                className="flex items-center gap-4"
+              >
+                <div className="grid size-11 place-items-center rounded-full bg-primary-foreground/10">
+                  <Phone className="size-5 text-gold" />
+                </div>
+                <span className="font-semibold">{company.phone}</span>
+              </a>
+              <a href={`mailto:${company.email}`} className="flex items-center gap-4">
+                <div className="grid size-11 place-items-center rounded-full bg-primary-foreground/10">
+                  <Mail className="size-5 text-gold" />
+                </div>
+                <span className="font-semibold">{company.email}</span>
+              </a>
+              <div className="flex items-center gap-4">
+                <div className="grid size-11 place-items-center rounded-full bg-primary-foreground/10">
+                  <MapPin className="size-5 text-gold" />
+                </div>
+                <span className="font-semibold">{company.address}</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="rounded-3xl bg-card p-8 text-foreground">
+            {sent ? (
+              <div className="flex h-full flex-col items-center justify-center py-12 text-center">
+                <h2 className="mb-3 text-2xl font-bold">Děkujeme!</h2>
+                <p className="max-w-sm text-muted-foreground">
+                  Vaše poptávka byla odeslána. Ozveme se vám co nejdříve s kalkulací na
+                  míru.
+                </p>
+              </div>
+            ) : (
+              <form className="space-y-5" onSubmit={handleSubmit}>
+                <div className="grid gap-5 sm:grid-cols-2">
+                  <Field label="Jméno">
+                    <input
+                      required
+                      type="text"
+                      placeholder="Jan Novák"
+                      className="w-full rounded-lg border border-input bg-background px-3 py-2.5 text-sm outline-none transition-shadow focus:ring-2 focus:ring-ring"
+                    />
+                  </Field>
+                  <Field label="Telefon">
+                    <input
+                      type="tel"
+                      placeholder="+420 …"
+                      className="w-full rounded-lg border border-input bg-background px-3 py-2.5 text-sm outline-none transition-shadow focus:ring-2 focus:ring-ring"
+                    />
+                  </Field>
+                </div>
+                <Field label="E-mail">
+                  <input
+                    required
+                    type="email"
+                    placeholder="email@example.cz"
+                    className="w-full rounded-lg border border-input bg-background px-3 py-2.5 text-sm outline-none transition-shadow focus:ring-2 focus:ring-ring"
+                  />
+                </Field>
+                <Field label="Detaily cesty">
+                  <textarea
+                    required
+                    rows={4}
+                    placeholder="Odkud, kam, kdy a kolik osob…"
+                    className="w-full resize-none rounded-lg border border-input bg-background px-3 py-2.5 text-sm outline-none transition-shadow focus:ring-2 focus:ring-ring"
+                  />
+                </Field>
+                <button
+                  type="submit"
+                  className="w-full rounded-xl bg-gold py-3.5 font-bold text-gold-foreground transition-all hover:brightness-110"
+                >
+                  Odeslat nezávaznou poptávku
+                </button>
+              </form>
+            )}
+          </div>
+        </div>
+      </section>
+    </SiteLayout>
+  );
+}
+
+function Field({ label, children }: { label: string; children: React.ReactNode }) {
+  return (
+    <label className="block space-y-1.5">
+      <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+        {label}
+      </span>
+      {children}
+    </label>
+  );
+}

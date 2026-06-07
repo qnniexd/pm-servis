@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as VozovyParkRouteImport } from './routes/vozovy-park'
 import { Route as SluzbyRouteImport } from './routes/sluzby'
+import { Route as KontaktRouteImport } from './routes/kontakt'
 import { Route as IndexRouteImport } from './routes/index'
 
 const VozovyParkRoute = VozovyParkRouteImport.update({
@@ -23,6 +24,11 @@ const SluzbyRoute = SluzbyRouteImport.update({
   path: '/sluzby',
   getParentRoute: () => rootRouteImport,
 } as any)
+const KontaktRoute = KontaktRouteImport.update({
+  id: '/kontakt',
+  path: '/kontakt',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -31,30 +37,34 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/kontakt': typeof KontaktRoute
   '/sluzby': typeof SluzbyRoute
   '/vozovy-park': typeof VozovyParkRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/kontakt': typeof KontaktRoute
   '/sluzby': typeof SluzbyRoute
   '/vozovy-park': typeof VozovyParkRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/kontakt': typeof KontaktRoute
   '/sluzby': typeof SluzbyRoute
   '/vozovy-park': typeof VozovyParkRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/sluzby' | '/vozovy-park'
+  fullPaths: '/' | '/kontakt' | '/sluzby' | '/vozovy-park'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/sluzby' | '/vozovy-park'
-  id: '__root__' | '/' | '/sluzby' | '/vozovy-park'
+  to: '/' | '/kontakt' | '/sluzby' | '/vozovy-park'
+  id: '__root__' | '/' | '/kontakt' | '/sluzby' | '/vozovy-park'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  KontaktRoute: typeof KontaktRoute
   SluzbyRoute: typeof SluzbyRoute
   VozovyParkRoute: typeof VozovyParkRoute
 }
@@ -75,6 +85,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SluzbyRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/kontakt': {
+      id: '/kontakt'
+      path: '/kontakt'
+      fullPath: '/kontakt'
+      preLoaderRoute: typeof KontaktRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -87,6 +104,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  KontaktRoute: KontaktRoute,
   SluzbyRoute: SluzbyRoute,
   VozovyParkRoute: VozovyParkRoute,
 }
