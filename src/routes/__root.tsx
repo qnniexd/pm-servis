@@ -77,19 +77,32 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "PM-servis — Autobusová doprava a přeprava osob" },
+      {
+        name: "description",
+        content:
+          "Profesionální vnitrostátní i mezinárodní autobusová doprava moderním vozovým parkem. Nezávazná poptávka a kalkulace na míru do 24 hodin.",
+      },
+      { name: "author", content: "PM-servis s.r.o." },
+      { property: "og:title", content: "PM-servis — Autobusová doprava" },
+      {
+        property: "og:description",
+        content:
+          "Bezpečná a pohodlná přeprava osob moderními autobusy a minibusy po celé Evropě.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
       {
         rel: "stylesheet",
         href: appCss,
+      },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap",
       },
     ],
   }),
