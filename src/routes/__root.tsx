@@ -84,7 +84,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "Profesionální vnitrostátní i mezinárodní autobusová doprava moderním vozovým parkem. Nezávazná poptávka a kalkulace na míru do 24 hodin.",
       },
       { name: "author", content: "PM-servis s.r.o." },
-      { property: "og:title", content: "PM-servis — Autobusová doprava" },
+      { property: "og:title", content: "PM-servis — Autobusová doprava a přeprava osob" },
       {
         property: "og:description",
         content:
@@ -92,6 +92,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
+      { name: "twitter:title", content: "PM-servis — Autobusová doprava a přeprava osob" },
+      { name: "description", content: "Modernizes the PMServis bus company website with a refreshed, contemporary online presence." },
+      { property: "og:description", content: "Modernizes the PMServis bus company website with a refreshed, contemporary online presence." },
+      { name: "twitter:description", content: "Modernizes the PMServis bus company website with a refreshed, contemporary online presence." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/8dd942ac-77cf-4487-ad62-33efab13085e/id-preview-c1705ed2--7fe1cdaa-7ded-4204-816a-7c921896086c.lovable.app-1780839977762.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/8dd942ac-77cf-4487-ad62-33efab13085e/id-preview-c1705ed2--7fe1cdaa-7ded-4204-816a-7c921896086c.lovable.app-1780839977762.png" },
     ],
     links: [
       {
