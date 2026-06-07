@@ -15,11 +15,9 @@ export function Navbar() {
   return (
     <nav className="sticky top-0 z-50 border-b border-border bg-background/85 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-12">
-        <Link to="/" className="flex items-center gap-2" onClick={() => setOpen(false)}>
-          <div className="grid size-10 place-items-center rounded-lg bg-navy text-lg font-bold text-primary-foreground">
-            PM
-          </div>
-          <span className="text-xl font-bold uppercase tracking-tight">Servis</span>
+        <Link to="/" className="flex items-center gap-1" onClick={() => setOpen(false)}>
+          <span className="text-2xl font-bold tracking-tight text-gold">PM</span>
+          <span className="text-2xl font-bold tracking-tight text-navy">SERVIS</span>
         </Link>
 
         <div className="hidden items-center gap-8 text-sm font-medium uppercase tracking-wider md:flex">
