@@ -52,6 +52,7 @@ export const fleet: Vehicle[] = [
     tagline: "Vlajková loď flotily",
     seats: "57 + 1 + 1",
     image: fleetMan,
+    images: [fleetMan, fleetMan2, fleetMan3, fleetMan4, fleetMan5, fleetMan6],
     description:
       "Reprezentativní dálkový autobus pro velké skupiny, zájezdy a firemní akce po celé Evropě.",
     features: [
@@ -69,6 +70,7 @@ export const fleet: Vehicle[] = [
     tagline: "Zájezdová verze",
     seats: "59 míst",
     image: fleetIrisbus,
+    images: [fleetIrisbus, fleetIrisbus2, fleetIrisbus3, fleetIrisbus4],
     description:
       "Prostorný plně klimatizovaný autobus v zájezdové verzi s vysokými a prostornými kufry.",
     features: [
@@ -85,6 +87,7 @@ export const fleet: Vehicle[] = [
     tagline: "Komfortní dálková přeprava",
     seats: "49 + 1",
     image: fleetBova,
+    images: [fleetBova, fleetBova2, fleetBova3, fleetBova4, fleetBova5, fleetBova6, fleetBova7],
     description:
       "Elegantní dálkový autobus s vyhřívanými kufry a kompletní palubní výbavou pro dlouhé trasy.",
     features: [
@@ -100,6 +103,7 @@ export const fleet: Vehicle[] = [
     tagline: "Univerzální střední třída",
     seats: "36 + 1",
     image: fleetIveco,
+    images: [fleetIveco, fleetIveco2, fleetIveco3, fleetIveco4, fleetIveco5],
     description:
       "Plně klimatizovaný autobus střední velikosti, ideální pro výlety a střední skupiny.",
     features: [
@@ -116,6 +120,7 @@ export const fleet: Vehicle[] = [
     tagline: "Obratný midibus",
     seats: "28 + 1 + 1",
     image: fleetIsuzu,
+    images: [fleetIsuzu, fleetIsuzu2, fleetIsuzu3, fleetIsuzu4, fleetIsuzu5, fleetIsuzu6],
     description:
       "Praktický midibus pro menší skupiny s tónovanými okny a zavazadlovým prostorem.",
     features: [
@@ -132,6 +137,7 @@ export const fleet: Vehicle[] = [
     tagline: "VIP minibus",
     seats: "20 + 1",
     image: fleetSprinter,
+    images: [fleetSprinter, fleetSprinter2, fleetSprinter3, fleetSprinter4, fleetSprinter5, fleetSprinter6, fleetSprinter7],
     description:
       "Komfortní minibus pro menší skupiny, firemní akce a transfery na letiště.",
     features: [
