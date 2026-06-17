@@ -7,7 +7,7 @@ export function Footer() {
       <div className="mx-auto flex max-w-7xl flex-col justify-between gap-12 md:flex-row">
         <div className="max-w-sm">
           <div className="mb-6 flex items-center gap-2">
-            <div className="grid size-8 place-items-center rounded-md bg-navy text-lg font-bold text-primary-foreground">
+            <div className="grid size-8 place-items-center rounded-md bg-gold text-lg font-bold text-gold-foreground">
               PM
             </div>
             <span className="text-lg font-bold uppercase tracking-tight">Servis</span>
