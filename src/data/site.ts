@@ -1,9 +1,38 @@
 import fleetMan from "@/assets/fleet-man.jpg";
+import fleetMan2 from "@/assets/fleet-man-2.jpg";
+import fleetMan3 from "@/assets/fleet-man-3.jpg";
+import fleetMan4 from "@/assets/fleet-man-4.jpg";
+import fleetMan5 from "@/assets/fleet-man-5.jpg";
+import fleetMan6 from "@/assets/fleet-man-6.jpg";
 import fleetIsuzu from "@/assets/fleet-isuzu.jpg";
+import fleetIsuzu2 from "@/assets/fleet-isuzu-2.jpg";
+import fleetIsuzu3 from "@/assets/fleet-isuzu-3.jpg";
+import fleetIsuzu4 from "@/assets/fleet-isuzu-4.jpg";
+import fleetIsuzu5 from "@/assets/fleet-isuzu-5.jpg";
+import fleetIsuzu6 from "@/assets/fleet-isuzu-6.jpg";
 import fleetIveco from "@/assets/fleet-iveco.jpg";
+import fleetIveco2 from "@/assets/fleet-iveco-2.jpg";
+import fleetIveco3 from "@/assets/fleet-iveco-3.jpg";
+import fleetIveco4 from "@/assets/fleet-iveco-4.jpg";
+import fleetIveco5 from "@/assets/fleet-iveco-5.jpg";
 import fleetIrisbus from "@/assets/fleet-irisbus.jpg";
+import fleetIrisbus2 from "@/assets/fleet-irisbus-2.jpg";
+import fleetIrisbus3 from "@/assets/fleet-irisbus-3.jpg";
+import fleetIrisbus4 from "@/assets/fleet-irisbus-4.jpg";
 import fleetSprinter from "@/assets/fleet-sprinter.jpg";
+import fleetSprinter2 from "@/assets/fleet-sprinter-2.jpg";
+import fleetSprinter3 from "@/assets/fleet-sprinter-3.jpg";
+import fleetSprinter4 from "@/assets/fleet-sprinter-4.jpg";
+import fleetSprinter5 from "@/assets/fleet-sprinter-5.jpg";
+import fleetSprinter6 from "@/assets/fleet-sprinter-6.jpg";
+import fleetSprinter7 from "@/assets/fleet-sprinter-7.jpg";
 import fleetBova from "@/assets/fleet-bova.jpg";
+import fleetBova2 from "@/assets/fleet-bova-2.jpg";
+import fleetBova3 from "@/assets/fleet-bova-3.jpg";
+import fleetBova4 from "@/assets/fleet-bova-4.jpg";
+import fleetBova5 from "@/assets/fleet-bova-5.jpg";
+import fleetBova6 from "@/assets/fleet-bova-6.jpg";
+import fleetBova7 from "@/assets/fleet-bova-7.jpg";
 
 export type Vehicle = {
   slug: string;
@@ -11,6 +40,7 @@ export type Vehicle = {
   tagline: string;
   seats: string;
   image: string;
+  images: string[];
   description: string;
   features: string[];
 };
