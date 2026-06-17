@@ -48,22 +48,60 @@ function ContactPage() {
             </p>
 
             <div className="space-y-5">
-              <a
-                href={`tel:${company.phone.replace(/\s/g, "")}`}
-                className="flex items-center gap-4"
-              >
-                <div className="grid size-11 place-items-center rounded-full bg-primary-foreground/10">
-                  <Phone className="size-5 text-gold" />
-                </div>
-                <span className="font-semibold">{company.phone}</span>
-              </a>
-              <a href={`mailto:${company.email}`} className="flex items-center gap-4">
-                <div className="grid size-11 place-items-center rounded-full bg-primary-foreground/10">
-                  <Mail className="size-5 text-gold" />
-                </div>
-                <span className="font-semibold">{company.email}</span>
-              </a>
-              <div className="flex items-center gap-4">
+              <div className="space-y-3">
+                <h3 className="text-xs font-bold uppercase tracking-widest text-gold">Telefon</h3>
+                <a href="tel:+420778204815" className="flex items-center gap-4">
+                  <div className="grid size-11 place-items-center rounded-full bg-primary-foreground/10">
+                    <Phone className="size-5 text-gold" />
+                  </div>
+                  <div>
+                    <span className="block font-semibold">+420 778 204 815</span>
+                    <span className="text-sm text-primary-foreground/60">Lubomír Morávek</span>
+                  </div>
+                </a>
+                <a href="tel:+420723369098" className="flex items-center gap-4">
+                  <div className="grid size-11 place-items-center rounded-full bg-primary-foreground/10">
+                    <Phone className="size-5 text-gold" />
+                  </div>
+                  <div>
+                    <span className="block font-semibold">+420 723 369 098</span>
+                    <span className="text-sm text-primary-foreground/60">Eva Morávková</span>
+                  </div>
+                </a>
+                <a href="tel:+420601577887" className="flex items-center gap-4">
+                  <div className="grid size-11 place-items-center rounded-full bg-primary-foreground/10">
+                    <Phone className="size-5 text-gold" />
+                  </div>
+                  <div>
+                    <span className="block font-semibold">+420 601 577 887</span>
+                    <span className="text-sm text-primary-foreground/60">Nákladní doprava</span>
+                  </div>
+                </a>
+              </div>
+
+              <div className="space-y-3 pt-2">
+                <h3 className="text-xs font-bold uppercase tracking-widest text-gold">E-mail</h3>
+                <a href="mailto:servis.pm@seznam.cz" className="flex items-center gap-4">
+                  <div className="grid size-11 place-items-center rounded-full bg-primary-foreground/10">
+                    <Mail className="size-5 text-gold" />
+                  </div>
+                  <span className="font-semibold">servis.pm@seznam.cz</span>
+                </a>
+                <a href="mailto:pm-trans@seznam.cz" className="flex items-center gap-4">
+                  <div className="grid size-11 place-items-center rounded-full bg-primary-foreground/10">
+                    <Mail className="size-5 text-gold" />
+                  </div>
+                  <span className="font-semibold">pm-trans@seznam.cz</span>
+                </a>
+                <a href="mailto:faktury.pmservis@seznam.cz" className="flex items-center gap-4">
+                  <div className="grid size-11 place-items-center rounded-full bg-primary-foreground/10">
+                    <Mail className="size-5 text-gold" />
+                  </div>
+                  <span className="font-semibold">faktury.pmservis@seznam.cz</span>
+                </a>
+              </div>
+
+              <div className="flex items-center gap-4 pt-2">
                 <div className="grid size-11 place-items-center rounded-full bg-primary-foreground/10">
                   <MapPin className="size-5 text-gold" />
                 </div>
