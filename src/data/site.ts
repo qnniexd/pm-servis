@@ -132,8 +132,8 @@ export const services = [
 ];
 
 export const company = {
-  name: "PM-servis s.r.o.",
-  phone: "+420 603 543 543",
-  email: "poptavky@pmservis.eu",
-  address: "Pardubická 1234, Kolín",
+  name: "PM-servis Eva Morávková",
+  phone: "+420 778 204 815",
+  email: "servis.pm@seznam.cz",
+  address: "Libňatov 182, 542 36",
 };
