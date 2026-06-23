@@ -81,7 +81,7 @@ export const fleet: Vehicle[] = [
     tagline: "Komfortní dálková přeprava",
     seats: "49 + 1",
     image: fleetBova,
-    images: [fleetBova, fleetBova2, fleetBova3, fleetBova4, fleetBova5, fleetBova6, fleetBova7],
+    images: [fleetBova, fleetBova2, fleetBova3, fleetBova4],
     description:
       "Elegantní dálkový autobus s vyhřívanými kufry a kompletní palubní výbavou pro dlouhé trasy.",
     features: [
