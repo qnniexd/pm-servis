@@ -27,9 +27,6 @@ import fleetBova from "@/assets/fleet-bova.jpg";
 import fleetBova2 from "@/assets/fleet-bova-2.jpg";
 import fleetBova3 from "@/assets/fleet-bova-3.jpg";
 import fleetBova4 from "@/assets/fleet-bova-4.jpg";
-import fleetBova5 from "@/assets/fleet-bova-5.jpg";
-import fleetBova6 from "@/assets/fleet-bova-6.jpg";
-import fleetBova7 from "@/assets/fleet-bova-7.jpg";
 
 export type Vehicle = {
   slug: string;
