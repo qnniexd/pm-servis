@@ -68,7 +68,7 @@ export const fleet: Vehicle[] = [
     tagline: "Zájezdová verze",
     seats: "59 míst",
     image: fleetIrisbus,
-    images: [fleetIrisbus, fleetIrisbus2, fleetIrisbus3],
+    images: [fleetIrisbus, fleetIrisbus3, fleetIrisbus4],
     description:
       "Prostorný plně klimatizovaný autobus v zájezdové verzi s vysokými a prostornými kufry.",
     features: [
