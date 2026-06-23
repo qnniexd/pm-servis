@@ -50,7 +50,7 @@ export const fleet: Vehicle[] = [
     tagline: "Vlajková loď flotily",
     seats: "57 + 1 + 1",
     image: fleetMan,
-    images: [fleetMan, fleetMan2, fleetMan3, fleetMan4, fleetMan5, fleetMan6],
+    images: [fleetMan, fleetMan2, fleetMan3, fleetMan4],
     description:
       "Reprezentativní dálkový autobus pro velké skupiny, zájezdy a firemní akce po celé Evropě.",
     features: [
