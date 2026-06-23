@@ -2,8 +2,6 @@ import fleetMan from "@/assets/fleet-man.jpg";
 import fleetMan2 from "@/assets/fleet-man-2.jpg";
 import fleetMan3 from "@/assets/fleet-man-3.jpg";
 import fleetMan4 from "@/assets/fleet-man-4.jpg";
-import fleetMan5 from "@/assets/fleet-man-5.jpg";
-import fleetMan6 from "@/assets/fleet-man-6.jpg";
 import fleetIsuzu from "@/assets/fleet-isuzu.jpg";
 import fleetIsuzu2 from "@/assets/fleet-isuzu-2.jpg";
 import fleetIsuzu3 from "@/assets/fleet-isuzu-3.jpg";
@@ -52,7 +50,7 @@ export const fleet: Vehicle[] = [
     tagline: "Vlajková loď flotily",
     seats: "57 + 1 + 1",
     image: fleetMan,
-    images: [fleetMan, fleetMan2, fleetMan3, fleetMan4, fleetMan5, fleetMan6],
+    images: [fleetMan, fleetMan2, fleetMan3, fleetMan4],
     description:
       "Reprezentativní dálkový autobus pro velké skupiny, zájezdy a firemní akce po celé Evropě.",
     features: [
