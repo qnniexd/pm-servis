@@ -75,7 +75,7 @@ function Index() {
               />
             </div>
             <div className="absolute -bottom-6 -left-6 hidden rounded-2xl border border-border bg-card p-6 shadow-2xl md:block">
-              <div className="text-3xl font-bold">25+</div>
+              <div className="text-3xl font-bold">8+</div>
               <div className="text-xs font-semibold uppercase tracking-tight text-muted-foreground">
                 Let zkušeností
               </div>
