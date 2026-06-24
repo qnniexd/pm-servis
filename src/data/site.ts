@@ -143,6 +143,69 @@ export const fleet: Vehicle[] = [
   },
 ];
 
+export const priceZones = [
+  { label: "1. pásmo", note: "Nájezd do 50 km" },
+  { label: "2. pásmo", note: "Nájezd do 100 km" },
+  { label: "3. pásmo", note: "Nájezd nad 100 km" },
+];
+
+export const priceDiscounts = [
+  { label: "Pravidelná přeprava", note: "Školy, sportovní kluby…", value: "10 %" },
+  { label: "Sleva pro seniory", note: "Pro seniorské skupiny", value: "5 %" },
+];
+
+export type Pricing = {
+  name: string;
+  zone1: string;
+  zone2: string;
+  zone3: string;
+  trailer: string;
+  waiting: string;
+};
+
+export const pricing: Pricing[] = [
+  {
+    name: "Mercedes-Benz Sprinter",
+    zone1: "Dohodou",
+    zone2: "26 Kč/km",
+    zone3: "24 Kč/km",
+    trailer: "+ 1,5 Kč/km",
+    waiting: "280 Kč/h",
+  },
+  {
+    name: "Irisbus Evadys",
+    zone1: "Dohodou",
+    zone2: "40 Kč/km",
+    zone3: "43 Kč/km",
+    trailer: "+ 2 Kč/km",
+    waiting: "320 Kč/h",
+  },
+  {
+    name: "Isuzu Turquoise",
+    zone1: "Dohodou",
+    zone2: "30 Kč/km",
+    zone3: "28 Kč/km",
+    trailer: "+ 1,5 Kč/km",
+    waiting: "280 Kč/h",
+  },
+  {
+    name: "Bova Futura",
+    zone1: "Dohodou",
+    zone2: "38 Kč/km",
+    zone3: "36 Kč/km",
+    trailer: "+ 1,8 Kč/km",
+    waiting: "280 Kč/h",
+  },
+  {
+    name: "MAN Lion´s Coach R08",
+    zone1: "Dohodou",
+    zone2: "45 Kč/km",
+    zone3: "42 Kč/km",
+    trailer: "+ 2,5 Kč/km",
+    waiting: "320 Kč/h",
+  },
+];
+
 export const services = [
   {
     title: "Autobusová doprava",
