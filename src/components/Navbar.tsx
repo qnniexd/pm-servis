@@ -6,6 +6,7 @@ const navItems = [
   { to: "/", label: "Úvod" },
   { to: "/vozovy-park", label: "Vozový park" },
   { to: "/sluzby", label: "Služby" },
+  { to: "/cenik", label: "Ceník" },
   { to: "/kontakt", label: "Kontakt" },
 ] as const;
 
