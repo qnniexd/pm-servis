@@ -175,8 +175,8 @@ export const pricing: Pricing[] = [
   {
     name: "Irisbus Evadys",
     zone1: "Dohodou",
-    zone2: "40 Kč/km",
-    zone3: "43 Kč/km",
+    zone2: "43 Kč/km",
+    zone3: "40 Kč/km",
     trailer: "+ 2 Kč/km",
     waiting: "320 Kč/h",
   },
