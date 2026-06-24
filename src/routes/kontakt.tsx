@@ -27,10 +27,36 @@ export const Route = createFileRoute("/kontakt")({
 
 function ContactPage() {
   const [sent, setSent] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const send = useServerFn(sendContactMessage);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSent(true);
+    setError(null);
+    setSubmitting(true);
+
+    const form = e.currentTarget;
+    const fd = new FormData(form);
+    try {
+      await send({
+        data: {
+          name: String(fd.get("name") ?? ""),
+          phone: String(fd.get("phone") ?? ""),
+          email: String(fd.get("email") ?? ""),
+          message: String(fd.get("message") ?? ""),
+        },
+      });
+      setSent(true);
+    } catch (err) {
+      setError(
+        err instanceof Error
+          ? err.message
+          : "Odeslání se nezdařilo. Zkuste to prosím později.",
+      );
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
