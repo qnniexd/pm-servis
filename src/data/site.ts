@@ -181,7 +181,7 @@ export const pricing: Pricing[] = [
     waiting: "320 Kč/h",
   },
   {
-    name: "Isuzu Turquoise",
+    name: "Isuzu Turquoise / Iveco Mago 2",
     zone1: "Dohodou",
     zone2: "30 Kč/km",
     zone3: "28 Kč/km",
