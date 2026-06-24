@@ -153,14 +153,18 @@ function ContactPage() {
                   <Field label="Jméno">
                     <input
                       required
+                      name="name"
                       type="text"
+                      maxLength={100}
                       placeholder="Jan Novák"
                       className="w-full rounded-lg border border-input bg-background px-3 py-2.5 text-sm outline-none transition-shadow focus:ring-2 focus:ring-ring"
                     />
                   </Field>
                   <Field label="Telefon">
                     <input
+                      name="phone"
                       type="tel"
+                      maxLength={40}
                       placeholder="+420 …"
                       className="w-full rounded-lg border border-input bg-background px-3 py-2.5 text-sm outline-none transition-shadow focus:ring-2 focus:ring-ring"
                     />
@@ -169,7 +173,9 @@ function ContactPage() {
                 <Field label="E-mail">
                   <input
                     required
+                    name="email"
                     type="email"
+                    maxLength={255}
                     placeholder="email@example.cz"
                     className="w-full rounded-lg border border-input bg-background px-3 py-2.5 text-sm outline-none transition-shadow focus:ring-2 focus:ring-ring"
                   />
@@ -177,16 +183,25 @@ function ContactPage() {
                 <Field label="Detaily cesty">
                   <textarea
                     required
+                    name="message"
                     rows={4}
+                    maxLength={2000}
                     placeholder="Odkud, kam, kdy a kolik osob…"
                     className="w-full resize-none rounded-lg border border-input bg-background px-3 py-2.5 text-sm outline-none transition-shadow focus:ring-2 focus:ring-ring"
                   />
                 </Field>
+                {error && (
+                  <p className="rounded-lg bg-destructive/10 px-3 py-2.5 text-sm font-medium text-destructive">
+                    {error}
+                  </p>
+                )}
                 <button
                   type="submit"
-                  className="w-full rounded-xl bg-gold py-3.5 font-bold text-gold-foreground transition-all hover:brightness-110"
+                  disabled={submitting}
+                  className="flex w-full items-center justify-center gap-2 rounded-xl bg-gold py-3.5 font-bold text-gold-foreground transition-all hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-70"
                 >
-                  Odeslat nezávaznou poptávku
+                  {submitting && <Loader2 className="size-5 animate-spin" />}
+                  {submitting ? "Odesílání…" : "Odeslat nezávaznou poptávku"}
                 </button>
               </form>
             )}
