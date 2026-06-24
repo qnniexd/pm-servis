@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
-import { Phone, Mail, MapPin } from "lucide-react";
+import { useServerFn } from "@tanstack/react-start";
+import { Phone, Mail, MapPin, Loader2 } from "lucide-react";
 import { SiteLayout } from "@/components/SiteLayout";
 import { company } from "@/data/site";
+import { sendContactMessage } from "@/lib/contact.functions";
 
 export const Route = createFileRoute("/kontakt")({
   head: () => ({
