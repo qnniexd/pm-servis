@@ -16,7 +16,6 @@ import fleetIrisbus3 from "@/assets/fleet-irisbus-3.jpg";
 import fleetIrisbus4 from "@/assets/fleet-irisbus-4.jpg";
 import fleetSprinter from "@/assets/fleet-sprinter.jpg";
 import fleetSprinter2 from "@/assets/fleet-sprinter-2.jpg";
-import fleetSprinter3 from "@/assets/fleet-sprinter-3.jpg";
 import fleetSprinter4 from "@/assets/fleet-sprinter-4.jpg";
 import fleetSprinter5 from "@/assets/fleet-sprinter-5.jpg";
 import fleetSprinter6 from "@/assets/fleet-sprinter-6.jpg";
