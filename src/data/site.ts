@@ -3,7 +3,6 @@ import fleetMan2 from "@/assets/fleet-man-2.jpg";
 import fleetMan3 from "@/assets/fleet-man-3.jpg";
 import fleetMan4 from "@/assets/fleet-man-4.jpg";
 import fleetIsuzu from "@/assets/fleet-isuzu.jpg";
-import fleetIsuzu2 from "@/assets/fleet-isuzu-2.jpg";
 import fleetIsuzu3 from "@/assets/fleet-isuzu-3.jpg";
 import fleetIsuzu4 from "@/assets/fleet-isuzu-4.jpg";
 import fleetIsuzu5 from "@/assets/fleet-isuzu-5.jpg";
@@ -113,7 +112,7 @@ export const fleet: Vehicle[] = [
     tagline: "Obratný midibus",
     seats: "28 + 1 + 1",
     image: fleetIsuzu,
-    images: [fleetIsuzu, fleetIsuzu2, fleetIsuzu3, fleetIsuzu4, fleetIsuzu5, fleetIsuzu6],
+    images: [fleetIsuzu, fleetIsuzu3, fleetIsuzu4, fleetIsuzu5, fleetIsuzu6],
     description:
       "Praktický midibus pro menší skupiny s tónovanými okny a zavazadlovým prostorem.",
     features: [
