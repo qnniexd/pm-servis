@@ -9,7 +9,6 @@ import fleetIsuzu4 from "@/assets/fleet-isuzu-4.jpg";
 import fleetIsuzu5 from "@/assets/fleet-isuzu-5.jpg";
 import fleetIsuzu6 from "@/assets/fleet-isuzu-6.jpg";
 import fleetIveco from "@/assets/fleet-iveco.jpg";
-import fleetIveco2 from "@/assets/fleet-iveco-2.jpg";
 import fleetIveco3 from "@/assets/fleet-iveco-3.jpg";
 import fleetIveco4 from "@/assets/fleet-iveco-4.jpg";
 import fleetIveco5 from "@/assets/fleet-iveco-5.jpg";
@@ -97,7 +96,7 @@ export const fleet: Vehicle[] = [
     tagline: "Univerzální střední třída",
     seats: "36 + 1",
     image: fleetIveco,
-    images: [fleetIveco, fleetIveco2, fleetIveco3, fleetIveco4, fleetIveco5],
+    images: [fleetIveco, fleetIveco3, fleetIveco4, fleetIveco5],
     description:
       "Plně klimatizovaný autobus střední velikosti, ideální pro výlety a střední skupiny.",
     features: [
