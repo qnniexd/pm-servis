@@ -11,7 +11,6 @@ import fleetIsuzu6 from "@/assets/fleet-isuzu-6.jpg";
 import fleetIveco from "@/assets/fleet-iveco.jpg";
 import fleetIveco3 from "@/assets/fleet-iveco-3.jpg";
 import fleetIveco4 from "@/assets/fleet-iveco-4.jpg";
-import fleetIveco4 from "@/assets/fleet-iveco-4.jpg";
 import fleetIveco5 from "@/assets/fleet-iveco-5.jpg";
 import fleetIrisbus from "@/assets/fleet-irisbus.jpg";
 import fleetIrisbus3 from "@/assets/fleet-irisbus-3.jpg";
