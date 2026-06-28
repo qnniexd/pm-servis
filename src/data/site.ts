@@ -127,7 +127,7 @@ export const fleet: Vehicle[] = [
     tagline: "VIP minibus",
     seats: "20 + 1",
     image: fleetSprinter,
-    images: [fleetSprinter, fleetSprinter2, fleetSprinter4, fleetSprinter5, fleetSprinter6, fleetSprinter7],
+    images: [fleetSprinter, fleetSprinter2, fleetSprinter4, fleetSprinter6, fleetSprinter7],
     description:
       "Komfortní minibus pro menší skupiny, firemní akce a transfery na letiště.",
     features: [
