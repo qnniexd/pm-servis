@@ -51,6 +51,7 @@ export const sendContactMessage = createServerFn({ method: "POST" })
             { name: "Jméno", value: data.name, inline: true },
             { name: "Telefon", value: data.phone || "—", inline: true },
             { name: "E-mail", value: data.email, inline: false },
+            { name: "Služba", value: data.service, inline: false },
             { name: "Detaily cesty", value: data.message, inline: false },
           ],
           timestamp: new Date().toISOString(),
