@@ -23,11 +23,11 @@ const contactSchema = z.object({
     .trim()
     .nonempty({ message: "Vyberte prosím službu." })
     .max(100, { message: "Služba je příliš dlouhá." }),
-  message: z
-    .string()
-    .trim()
-    .nonempty({ message: "Napište prosím detaily cesty." })
-    .max(2000, { message: "Zpráva je příliš dlouhá." }),
+    message: z
+      .string()
+      .trim()
+      .nonempty({ message: "Napište prosím detaily poptávky." })
+      .max(2000, { message: "Zpráva je příliš dlouhá." }),
 });
 
 export type ContactInput = z.infer<typeof contactSchema>;
@@ -43,17 +43,20 @@ export const sendContactMessage = createServerFn({ method: "POST" })
 
     const payload = {
       username: "PM-servis — poptávka",
+      content: `📬 **Nová poptávka z webu** — ${data.service}\n👤 **${data.name}** · 📧 ${data.email}${data.phone ? " · 📞 " + data.phone : ""}`,
       embeds: [
         {
-          title: "Nová poptávka z webu",
+          title: `${data.service}`,
+          description: `Poptávka od **${data.name}** na službu „${data.service}“.`,
           color: 0xc9a227,
           fields: [
-            { name: "Jméno", value: data.name, inline: true },
-            { name: "Telefon", value: data.phone || "—", inline: true },
-            { name: "E-mail", value: data.email, inline: false },
-            { name: "Služba", value: data.service, inline: false },
-            { name: "Detaily cesty", value: data.message, inline: false },
+            { name: "👤 Jméno", value: data.name, inline: true },
+            { name: "📧 E-mail", value: `[${data.email}](mailto:${data.email})`, inline: true },
+            { name: "📞 Telefon", value: data.phone ? `[${data.phone}](tel:${data.phone.replace(/\s/g, "")})` : "—", inline: true },
+            { name: "🛎️ Služba", value: data.service, inline: false },
+            { name: "📝 Detaily poptávky", value: data.message, inline: false },
           ],
+          footer: { text: "PM-servis Eva Morávková" },
           timestamp: new Date().toISOString(),
         },
       ],
