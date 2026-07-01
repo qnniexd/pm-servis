@@ -44,6 +44,7 @@ function ContactPage() {
           name: String(fd.get("name") ?? ""),
           phone: String(fd.get("phone") ?? ""),
           email: String(fd.get("email") ?? ""),
+          service: String(fd.get("service") ?? ""),
           message: String(fd.get("message") ?? ""),
         },
       });
