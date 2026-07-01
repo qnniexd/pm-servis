@@ -181,6 +181,22 @@ function ContactPage() {
                     className="w-full rounded-lg border border-input bg-background px-3 py-2.5 text-sm outline-none transition-shadow focus:ring-2 focus:ring-ring"
                   />
                 </Field>
+                <Field label="Služba, o kterou máte zájem">
+                  <select
+                    required
+                    name="service"
+                    className="w-full rounded-lg border border-input bg-background px-3 py-2.5 text-sm outline-none transition-shadow focus:ring-2 focus:ring-ring"
+                  >
+                    <option value="" disabled>
+                      Vyberte službu
+                    </option>
+                    {services.map((s) => (
+                      <option key={s.title} value={s.title}>
+                        {s.title}
+                      </option>
+                    ))}
+                  </select>
+                </Field>
                 <Field label="Detaily cesty">
                   <textarea
                     required
