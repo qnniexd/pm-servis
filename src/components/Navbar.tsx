@@ -16,9 +16,14 @@ export function Navbar() {
   return (
     <nav className="sticky top-0 z-50 border-b border-border bg-background/85 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-12">
-        <Link to="/" className="flex items-center gap-1" onClick={() => setOpen(false)}>
-          <span className="text-2xl font-bold tracking-tight text-gold">PM</span>
-          <span className="text-2xl font-bold tracking-tight text-navy">SERVIS</span>
+        <Link to="/" className="flex flex-col gap-0" onClick={() => setOpen(false)}>
+          <div className="flex items-center gap-1">
+            <span className="text-2xl font-bold tracking-tight text-gold">PM</span>
+            <span className="text-2xl font-bold tracking-tight text-navy">SERVIS</span>
+          </div>
+          <span className="text-[10px] font-medium uppercase tracking-[0.2em] text-muted-foreground/80">
+            professional management
+          </span>
         </Link>
 
         <div className="hidden items-center gap-8 text-sm font-medium uppercase tracking-wider md:flex">
