@@ -43,7 +43,7 @@ export const sendContactMessage = createServerFn({ method: "POST" })
 
     const payload = {
       username: "PM-servis — poptávka",
-      content: `📬 **Nová poptávka z webu** — ${data.service}\n👤 **${data.name}** · 📧 ${data.email}${data.phone ? " · 📞 " + data.phone : ""}`,
+      content: `📬 **Nová poptávka z webu** — ${data.service}\n<@&1518932835304476682>\n👤 **${data.name}** · 📧 ${data.email}${data.phone ? " · 📞 " + data.phone : ""}`,
       embeds: [
         {
           title: `${data.service}`,
