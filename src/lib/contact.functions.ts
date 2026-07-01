@@ -18,6 +18,11 @@ const contactSchema = z.object({
     .trim()
     .email({ message: "Zadejte platný e-mail." })
     .max(255, { message: "E-mail je příliš dlouhý." }),
+  service: z
+    .string()
+    .trim()
+    .nonempty({ message: "Vyberte prosím službu." })
+    .max(100, { message: "Služba je příliš dlouhá." }),
   message: z
     .string()
     .trim()
