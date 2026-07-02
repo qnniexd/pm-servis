@@ -218,6 +218,11 @@ export const services = [
     description:
       "Pronájem pojízdného hliníkového lešení pro bezpečnou práci ve výškách. Snadná montáž a vysoká stabilita.",
   },
+  {
+    title: "Tvorba webových stránek",
+    description:
+      "Navrhneme a vytvoříme moderní webovou prezentaci na míru — od jednoduché stránky po responzivní firemní web s optimalizací pro vyhledávače.",
+  },
 ];
 
 export const company = {
