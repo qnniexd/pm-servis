@@ -26,25 +26,13 @@ const positions = [
   {
     icon: Bus,
     title: "Řidič autobusu",
-    subtitle: "1. pozice",
-    summary: "Hledáme zkušeného řidiče autobusu pro vnitrostátní a mezinárodní zájezdovou dopravu.",
-  },
-  {
-    icon: Bus,
-    title: "Řidič autobusu",
-    subtitle: "2. pozice",
+    subtitle: "2 volné pozice",
     summary: "Hledáme zkušeného řidiče autobusu pro vnitrostátní a mezinárodní zájezdovou dopravu.",
   },
   {
     icon: Truck,
     title: "Řidič nákladního vozidla",
-    subtitle: "1. pozice",
-    summary: "Hledáme spolehlivého řidiče nákladního vozidla pro nákladní dopravu.",
-  },
-  {
-    icon: Truck,
-    title: "Řidič nákladního vozidla",
-    subtitle: "2. pozice",
+    subtitle: "2 volné pozice",
     summary: "Hledáme spolehlivého řidiče nákladního vozidla pro nákladní dopravu.",
   },
 ];
