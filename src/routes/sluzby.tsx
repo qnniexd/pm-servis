@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Bus, Building2, Construction } from "lucide-react";
+import { Bus, Building2, Construction, Globe } from "lucide-react";
 import { SiteLayout } from "@/components/SiteLayout";
 import { services } from "@/data/site";
 import serviceScaffolding from "@/assets/service-scaffolding.jpg";
@@ -11,7 +11,7 @@ export const Route = createFileRoute("/sluzby")({
       {
         name: "description",
         content:
-          "Autobusová doprava, technická správa a údržba nemovitostí a půjčovna pojízdného hliníkového lešení od PM-servis.",
+          "Autobusová doprava, technická správa a údržba nemovitostí, půjčovna pojízdného hliníkového lešení a tvorba webových stránek od PM-servis.",
       },
       { property: "og:title", content: "Služby — PM-servis" },
       {
@@ -23,7 +23,7 @@ export const Route = createFileRoute("/sluzby")({
   component: ServicesPage,
 });
 
-const icons = [Bus, Building2, Construction];
+const icons = [Bus, Building2, Construction, Globe];
 
 function ServicesPage() {
   return (
@@ -43,7 +43,7 @@ function ServicesPage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-16 lg:px-12 lg:py-24">
-        <div className="grid gap-8 md:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {services.map((s, i) => {
             const Icon = icons[i];
             return (
