@@ -13,6 +13,7 @@ import { Route as VozovyParkRouteImport } from './routes/vozovy-park'
 import { Route as SluzbyRouteImport } from './routes/sluzby'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as KontaktRouteImport } from './routes/kontakt'
+import { Route as KarieraRouteImport } from './routes/kariera'
 import { Route as CenikRouteImport } from './routes/cenik'
 import { Route as IndexRouteImport } from './routes/index'
 
@@ -36,6 +37,11 @@ const KontaktRoute = KontaktRouteImport.update({
   path: '/kontakt',
   getParentRoute: () => rootRouteImport,
 } as any)
+const KarieraRoute = KarieraRouteImport.update({
+  id: '/kariera',
+  path: '/kariera',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CenikRoute = CenikRouteImport.update({
   id: '/cenik',
   path: '/cenik',
@@ -50,6 +56,7 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/cenik': typeof CenikRoute
+  '/kariera': typeof KarieraRoute
   '/kontakt': typeof KontaktRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sluzby': typeof SluzbyRoute
@@ -58,6 +65,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/cenik': typeof CenikRoute
+  '/kariera': typeof KarieraRoute
   '/kontakt': typeof KontaktRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sluzby': typeof SluzbyRoute
@@ -67,6 +75,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/cenik': typeof CenikRoute
+  '/kariera': typeof KarieraRoute
   '/kontakt': typeof KontaktRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sluzby': typeof SluzbyRoute
@@ -77,16 +86,25 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/cenik'
+    | '/kariera'
     | '/kontakt'
     | '/sitemap.xml'
     | '/sluzby'
     | '/vozovy-park'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/cenik' | '/kontakt' | '/sitemap.xml' | '/sluzby' | '/vozovy-park'
+  to:
+    | '/'
+    | '/cenik'
+    | '/kariera'
+    | '/kontakt'
+    | '/sitemap.xml'
+    | '/sluzby'
+    | '/vozovy-park'
   id:
     | '__root__'
     | '/'
     | '/cenik'
+    | '/kariera'
     | '/kontakt'
     | '/sitemap.xml'
     | '/sluzby'
@@ -96,6 +114,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   CenikRoute: typeof CenikRoute
+  KarieraRoute: typeof KarieraRoute
   KontaktRoute: typeof KontaktRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   SluzbyRoute: typeof SluzbyRoute
@@ -132,6 +151,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof KontaktRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/kariera': {
+      id: '/kariera'
+      path: '/kariera'
+      fullPath: '/kariera'
+      preLoaderRoute: typeof KarieraRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/cenik': {
       id: '/cenik'
       path: '/cenik'
@@ -152,6 +178,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   CenikRoute: CenikRoute,
+  KarieraRoute: KarieraRoute,
   KontaktRoute: KontaktRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   SluzbyRoute: SluzbyRoute,

@@ -53,6 +53,16 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link to="/cenik" className="hover:text-gold">
+                  Ceník
+                </Link>
+              </li>
+              <li>
+                <Link to="/kariera" className="hover:text-gold">
+                  Kariéra
+                </Link>
+              </li>
+              <li>
                 <Link to="/kontakt" className="hover:text-gold">
                   Poptávka
                 </Link>
