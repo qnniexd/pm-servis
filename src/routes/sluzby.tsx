@@ -64,7 +64,7 @@ function ServicesPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 pb-16 lg:px-12 lg:pb-24">
+      <section className="bg-surface py-16 lg:py-24">
         <div className="mb-12 text-center">
           <span className="mb-6 inline-block rounded bg-gold/10 px-3 py-1 text-xs font-bold uppercase tracking-widest text-gold">
             Naši obchodní partneři
