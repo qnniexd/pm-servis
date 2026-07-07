@@ -114,19 +114,37 @@ function ContactPage() {
                   <div className="grid size-11 place-items-center rounded-full bg-primary-foreground/10">
                     <Mail className="size-5 text-gold" />
                   </div>
-                  <span className="font-semibold">servis.pm@seznam.cz</span>
+                  <div>
+                    <span className="block font-semibold">servis.pm@seznam.cz</span>
+                    <span className="text-sm text-primary-foreground/60">Autobusová doprava</span>
+                  </div>
                 </a>
                 <a href="mailto:pm-trans@seznam.cz" className="flex items-center gap-4">
                   <div className="grid size-11 place-items-center rounded-full bg-primary-foreground/10">
                     <Mail className="size-5 text-gold" />
                   </div>
-                  <span className="font-semibold">pm-trans@seznam.cz</span>
+                  <div>
+                    <span className="block font-semibold">pm-trans@seznam.cz</span>
+                    <span className="text-sm text-primary-foreground/60">Nákladní doprava</span>
+                  </div>
                 </a>
                 <a href="mailto:faktury.pmservis@seznam.cz" className="flex items-center gap-4">
                   <div className="grid size-11 place-items-center rounded-full bg-primary-foreground/10">
                     <Mail className="size-5 text-gold" />
                   </div>
-                  <span className="font-semibold">faktury.pmservis@seznam.cz</span>
+                  <div>
+                    <span className="block font-semibold">faktury.pmservis@seznam.cz</span>
+                    <span className="text-sm text-primary-foreground/60">Fakturace</span>
+                  </div>
+                </a>
+                <a href="mailto:pisarikova.annie@gmail.com" className="flex items-center gap-4">
+                  <div className="grid size-11 place-items-center rounded-full bg-primary-foreground/10">
+                    <Mail className="size-5 text-gold" />
+                  </div>
+                  <div>
+                    <span className="block font-semibold">pisarikova.annie@gmail.com</span>
+                    <span className="text-sm text-primary-foreground/60">Webové stránky</span>
+                  </div>
                 </a>
               </div>
 
