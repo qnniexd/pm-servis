@@ -89,6 +89,7 @@ function ServicesPage() {
             { name: "Spartak Nové Město/M", note: "Hokej" },
             { name: "Sparta Úpice", note: "Fotbal" },
             { name: "Sokol Jaroměř", note: "Atletika" },
+            { name: "MONA NÁCHOD", note: "Mažoretky" },
           ].map((partner) => (
             <div
               key={partner.name}
