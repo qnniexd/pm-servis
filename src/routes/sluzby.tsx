@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Bus, Building2, Construction, Globe } from "lucide-react";
+import { Bus, Building2, Construction, Globe, Handshake } from "lucide-react";
 import { SiteLayout } from "@/components/SiteLayout";
 import { services } from "@/data/site";
 import serviceScaffolding from "@/assets/service-scaffolding.jpg";
