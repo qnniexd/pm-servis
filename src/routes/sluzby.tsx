@@ -73,15 +73,15 @@ function ServicesPage() {
             Spolupracujeme se školkami, školami, kluby i firmami
           </h2>
           <p className="mx-auto max-w-2xl text-muted-foreground">
-            Pravidelně zajišťujeme dopravu pro naše dlouholeté partnery z řad sportovních klubů, škol, školek i průmyslových podniků.
+            Pravidelně zajišťujeme dopravu pro naše dlouhodobé partnery z řad sportovních klubů, škol, školek i průmyslových podniků.
           </p>
         </div>
 
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {[
             {
-              name: "SAARGUMMI – STOLÍN",
-              location: "Červený Kostelec",
+              name: "SAARGUMMI",
+              location: "Stolín - Červený Kostelec",
               note: "3. směnný návoz zaměstnanců",
             },
             { name: "MFK Nové Město/M", note: "Fotbal" },
