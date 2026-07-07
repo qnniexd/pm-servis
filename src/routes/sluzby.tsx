@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Bus, Building2, Construction, Globe } from "lucide-react";
+import { Bus, Building2, Construction, Globe, Handshake } from "lucide-react";
 import { SiteLayout } from "@/components/SiteLayout";
 import { services } from "@/data/site";
 import serviceScaffolding from "@/assets/service-scaffolding.jpg";
@@ -62,6 +62,55 @@ function ServicesPage() {
             );
           })}
         </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-6 pb-16 lg:px-12 lg:pb-24">
+        <div className="mb-12 text-center">
+          <span className="mb-6 inline-block rounded bg-gold/10 px-3 py-1 text-xs font-bold uppercase tracking-widest text-gold">
+            Naši obchodní partneři
+          </span>
+          <h2 className="mx-auto mb-6 max-w-3xl text-3xl font-bold lg:text-5xl">
+            Spolupracujeme se školkami, školami, kluby i firmami
+          </h2>
+          <p className="mx-auto max-w-2xl text-muted-foreground">
+            Pravidelně zajišťujeme dopravu pro naše dlouholeté partnery z řad sportovních klubů, škol, školek i průmyslových podniků.
+          </p>
+        </div>
+
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {[
+            {
+              name: "SAARGUMMI – STOLÍN",
+              location: "Červený Kostelec",
+              note: "3. směnný návoz zaměstnanců",
+            },
+            { name: "MFK Nové Město/M", note: "Fotbal" },
+            { name: "Florbal Hradec Králové", note: "Florbal" },
+            { name: "Spartak Nové Město/M", note: "Hokej" },
+            { name: "Sparta Úpice", note: "Fotbal" },
+            { name: "Sokol Jaroměř", note: "Atletika" },
+          ].map((partner) => (
+            <div
+              key={partner.name}
+              className="flex items-start gap-4 rounded-2xl border border-border bg-card p-6"
+            >
+              <div className="grid size-10 shrink-0 place-items-center rounded-xl bg-gold/10 text-gold">
+                <Handshake className="size-5" />
+              </div>
+              <div>
+                <h3 className="font-bold">{partner.name}</h3>
+                {partner.location && (
+                  <p className="text-sm text-muted-foreground">{partner.location}</p>
+                )}
+                <p className="text-sm font-medium text-gold">{partner.note}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <p className="mt-10 text-center text-muted-foreground">
+          A další sportovní kluby, školy a školky.
+        </p>
       </section>
 
       <section className="mx-auto max-w-7xl px-6 pb-24 lg:px-12">
