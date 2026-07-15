@@ -1,12 +1,46 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, type ReactElement } from "react";
 
 type Lang = "cs" | "en" | "de";
 
-const flags: Record<Lang, { label: string; emoji: string; title: string }> = {
-  cs: { label: "CZ", emoji: "🇨🇿", title: "Čeština" },
-  en: { label: "EN", emoji: "🇬🇧", title: "English" },
-  de: { label: "DE", emoji: "🇩🇪", title: "Deutsch" },
+function FlagCZ() {
+  return (
+    <svg viewBox="0 0 60 40" className="block h-4 w-6 rounded-[2px] shadow-sm ring-1 ring-black/10" aria-hidden>
+      <rect width="60" height="20" fill="#fff" />
+      <rect y="20" width="60" height="20" fill="#d7141a" />
+      <polygon points="0,0 30,20 0,40" fill="#11457e" />
+    </svg>
+  );
+}
+function FlagEN() {
+  return (
+    <svg viewBox="0 0 60 30" className="block h-4 w-6 rounded-[2px] shadow-sm ring-1 ring-black/10" aria-hidden>
+      <clipPath id="uk-c"><rect width="60" height="30" /></clipPath>
+      <g clipPath="url(#uk-c)">
+        <rect width="60" height="30" fill="#012169" />
+        <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" strokeWidth="6" />
+        <path d="M0,0 L60,30 M60,0 L0,30" stroke="#C8102E" strokeWidth="3" />
+        <path d="M30,0 V30 M0,15 H60" stroke="#fff" strokeWidth="10" />
+        <path d="M30,0 V30 M0,15 H60" stroke="#C8102E" strokeWidth="6" />
+      </g>
+    </svg>
+  );
+}
+function FlagDE() {
+  return (
+    <svg viewBox="0 0 60 36" className="block h-4 w-6 rounded-[2px] shadow-sm ring-1 ring-black/10" aria-hidden>
+      <rect width="60" height="12" y="0" fill="#000" />
+      <rect width="60" height="12" y="12" fill="#dd0000" />
+      <rect width="60" height="12" y="24" fill="#ffce00" />
+    </svg>
+  );
+}
+
+const flags: Record<Lang, { label: string; title: string; Flag: () => ReactElement }> = {
+  cs: { label: "CZ", title: "Čeština", Flag: FlagCZ },
+  en: { label: "EN", title: "English", Flag: FlagEN },
+  de: { label: "DE", title: "Deutsch", Flag: FlagDE },
 };
+
 
 function readCookie(name: string): string | null {
   if (typeof document === "undefined") return null;
@@ -118,7 +152,7 @@ export function LanguageSwitcher() {
                 : "text-muted-foreground hover:text-foreground"
             }`}
           >
-            <span className="text-base leading-none">{f.emoji}</span>
+            <f.Flag />
             <span className="hidden lg:inline">{f.label}</span>
           </button>
         );
