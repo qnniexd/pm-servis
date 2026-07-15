@@ -83,6 +83,10 @@ export function Navbar() {
             >
               Nezávazná poptávka
             </Link>
+            <div className="mt-2 flex justify-center">
+              <LanguageSwitcher />
+            </div>
+
           </div>
         </div>
       )}
