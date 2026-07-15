@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
+import { LanguageSwitcher } from "./LanguageSwitcher";
+
 
 const navItems = [
   { to: "/", label: "Úvod" },
@@ -40,12 +42,16 @@ export function Navbar() {
           ))}
         </div>
 
-        <Link
-          to="/kontakt"
-          className="hidden rounded-full bg-navy px-6 py-2.5 text-sm font-semibold text-primary-foreground transition-all hover:bg-gold md:inline-block"
-        >
-          Nezávazná poptávka
-        </Link>
+        <div className="hidden items-center gap-4 md:flex">
+          <LanguageSwitcher />
+          <Link
+            to="/kontakt"
+            className="rounded-full bg-navy px-6 py-2.5 text-sm font-semibold text-primary-foreground transition-all hover:bg-gold"
+          >
+            Nezávazná poptávka
+          </Link>
+        </div>
+
 
         <button
           className="md:hidden"
@@ -77,6 +83,10 @@ export function Navbar() {
             >
               Nezávazná poptávka
             </Link>
+            <div className="mt-2 flex justify-center">
+              <LanguageSwitcher />
+            </div>
+
           </div>
         </div>
       )}
