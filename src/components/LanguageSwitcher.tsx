@@ -112,7 +112,7 @@ export function LanguageSwitcher() {
             key={code}
             type="button"
             onClick={() => change(code)}
-            title={f.title, title}
+            title={f.title}
             aria-label={f.title}
             className={`rounded-md p-0.5 transition-opacity ${
               active ? "opacity-100" : "opacity-60 hover:opacity-100"
