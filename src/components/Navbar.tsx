@@ -42,12 +42,16 @@ export function Navbar() {
           ))}
         </div>
 
-        <Link
-          to="/kontakt"
-          className="hidden rounded-full bg-navy px-6 py-2.5 text-sm font-semibold text-primary-foreground transition-all hover:bg-gold md:inline-block"
-        >
-          Nezávazná poptávka
-        </Link>
+        <div className="hidden items-center gap-4 md:flex">
+          <LanguageSwitcher />
+          <Link
+            to="/kontakt"
+            className="rounded-full bg-navy px-6 py-2.5 text-sm font-semibold text-primary-foreground transition-all hover:bg-gold"
+          >
+            Nezávazná poptávka
+          </Link>
+        </div>
+
 
         <button
           className="md:hidden"
