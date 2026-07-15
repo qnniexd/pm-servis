@@ -114,15 +114,20 @@ export function LanguageSwitcher() {
             onClick={() => change(code)}
             title={f.title}
             aria-label={f.title}
-            className={`flex items-center gap-1 rounded-md px-1.5 py-1 text-xs font-semibold transition-all ${
-              active
-                ? "bg-gold/15 text-gold"
-                : "text-muted-foreground hover:text-foreground"
+            className={`rounded-sm p-0.5 transition-opacity ${
+              active ? "opacity-100" : "opacity-60 hover:opacity-100"
             }`}
           >
-            <f.Flag />
-            <span className="hidden lg:inline">{f.label}</span>
+            <img
+              src={f.src}
+              alt={f.title}
+              width={28}
+              height={20}
+              loading="lazy"
+              className="block h-5 w-auto"
+            />
           </button>
+
         );
       })}
     </div>
