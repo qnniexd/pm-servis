@@ -103,7 +103,7 @@ export function LanguageSwitcher() {
   };
 
   return (
-    <div className="flex items-center gap-1" translate="no">
+    <div className="flex items-center gap-0.5" translate="no">
       {(Object.keys(flags) as Lang[]).map((code) => {
         const f = flags[code];
         const active = lang === code;
@@ -112,22 +112,21 @@ export function LanguageSwitcher() {
             key={code}
             type="button"
             onClick={() => change(code)}
-            title={f.title}
+            title={f.title, title}
             aria-label={f.title}
-            className={`rounded-sm p-0.5 transition-opacity ${
+            className={`rounded-md p-0.5 transition-opacity ${
               active ? "opacity-100" : "opacity-60 hover:opacity-100"
             }`}
           >
             <img
               src={f.src}
               alt={f.title}
-              width={28}
-              height={20}
+              width={24}
+              height={16}
               loading="lazy"
-              className="block h-5 w-auto"
+              className="block h-4 w-auto rounded-md"
             />
           </button>
-
         );
       })}
     </div>
