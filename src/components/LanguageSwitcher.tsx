@@ -152,7 +152,7 @@ export function LanguageSwitcher() {
                 : "text-muted-foreground hover:text-foreground"
             }`}
           >
-            <span className="text-base leading-none">{f.emoji}</span>
+            <f.Flag />
             <span className="hidden lg:inline">{f.label}</span>
           </button>
         );
