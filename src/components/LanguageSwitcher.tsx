@@ -35,7 +35,7 @@ function FlagDE() {
   );
 }
 
-const flags: Record<Lang, { label: string; title: string; Flag: () => JSX.Element }> = {
+const flags: Record<Lang, { label: string; title: string; Flag: () => ReactElement }> = {
   cs: { label: "CZ", title: "Čeština", Flag: FlagCZ },
   en: { label: "EN", title: "English", Flag: FlagEN },
   de: { label: "DE", title: "Deutsch", Flag: FlagDE },
