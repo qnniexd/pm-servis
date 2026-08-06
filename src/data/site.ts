@@ -23,6 +23,12 @@ import fleetBova from "@/assets/fleet-bova.jpg";
 import fleetBova2 from "@/assets/fleet-bova-2.jpg";
 import fleetBova3 from "@/assets/fleet-bova-3.jpg";
 import fleetBova4 from "@/assets/fleet-bova-4.jpg";
+import fleetSprinter519a from "@/assets/fleet-sprinter519-1.jpg";
+import fleetSprinter519b from "@/assets/fleet-sprinter519-2.jpg";
+import fleetSprinter519c from "@/assets/fleet-sprinter519-3.jpg";
+import fleetSprinter519d from "@/assets/fleet-sprinter519-4.jpg";
+import fleetSprinter519e from "@/assets/fleet-sprinter519-5.jpg";
+import fleetSprinter519f from "@/assets/fleet-sprinter519-6.jpg";
 
 export type Vehicle = {
   slug: string;
