@@ -128,22 +128,6 @@ export const fleet: Vehicle[] = [
     ],
   },
   {
-    slug: "mercedes-sprinter",
-    name: "Mercedes-Benz Sprinter",
-    tagline: "VIP minibus",
-    seats: "20 + 1",
-    image: fleetSprinter,
-    images: [fleetSprinter, fleetSprinter2, fleetSprinter4, fleetSprinter6, fleetSprinter7],
-    description:
-      "Komfortní minibus pro menší skupiny, firemní akce a transfery na letiště.",
-    features: [
-      "Pásy na všech sedadlech",
-      "Polohovatelné sedačky",
-      "Zavazadlový prostor za sedačkami",
-      "Tónovaná boční okna",
-    ],
-  },
-  {
     slug: "mercedes-sprinter-519",
     name: "Mercedes-Benz Sprinter 519",
     tagline: "Prostorný minibus",
@@ -168,6 +152,22 @@ export const fleet: Vehicle[] = [
       "Klimatizace celovozová",
       "Přídavné topení",
       "TV a lednice",
+    ],
+  },
+  {
+    slug: "mercedes-sprinter",
+    name: "Mercedes-Benz Sprinter",
+    tagline: "VIP minibus",
+    seats: "20 + 1",
+    image: fleetSprinter,
+    images: [fleetSprinter, fleetSprinter2, fleetSprinter4, fleetSprinter6, fleetSprinter7],
+    description:
+      "Komfortní minibus pro menší skupiny, firemní akce a transfery na letiště.",
+    features: [
+      "Pásy na všech sedadlech",
+      "Polohovatelné sedačky",
+      "Zavazadlový prostor za sedačkami",
+      "Tónovaná boční okna",
     ],
   },
 ];
