@@ -143,7 +143,35 @@ export const fleet: Vehicle[] = [
       "Tónovaná boční okna",
     ],
   },
+  {
+    slug: "mercedes-sprinter-519",
+    name: "Mercedes-Benz Sprinter 519",
+    tagline: "Prostorný minibus",
+    seats: "20 + 1",
+    image: fleetSprinter519a,
+    images: [
+      fleetSprinter519a,
+      fleetSprinter519b,
+      fleetSprinter519c,
+      fleetSprinter519d,
+      fleetSprinter519e,
+      fleetSprinter519f,
+    ],
+    description:
+      "Komfortní minibus s celovozovou klimatizací, velkým zavazadlovým prostorem a kompletní palubní výbavou.",
+    features: [
+      "20 + 1 míst",
+      "Polohovatelné sedačky",
+      "Pásy na všech sedadlech",
+      "Velký zavazadlový prostor",
+      "Závěsné zařízení",
+      "Klimatizace celovozová",
+      "Přídavné topení",
+      "TV a lednice",
+    ],
+  },
 ];
+
 
 export const priceZones = [
   { label: "1. pásmo", note: "Nájezd do 50 km" },
