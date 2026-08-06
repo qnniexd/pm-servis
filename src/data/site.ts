@@ -23,6 +23,12 @@ import fleetBova from "@/assets/fleet-bova.jpg";
 import fleetBova2 from "@/assets/fleet-bova-2.jpg";
 import fleetBova3 from "@/assets/fleet-bova-3.jpg";
 import fleetBova4 from "@/assets/fleet-bova-4.jpg";
+import fleetSprinter519a from "@/assets/fleet-sprinter519-1.jpg";
+import fleetSprinter519b from "@/assets/fleet-sprinter519-2.jpg";
+import fleetSprinter519c from "@/assets/fleet-sprinter519-3.jpg";
+import fleetSprinter519d from "@/assets/fleet-sprinter519-4.jpg";
+import fleetSprinter519e from "@/assets/fleet-sprinter519-5.jpg";
+import fleetSprinter519f from "@/assets/fleet-sprinter519-6.jpg";
 
 export type Vehicle = {
   slug: string;
@@ -137,7 +143,35 @@ export const fleet: Vehicle[] = [
       "Tónovaná boční okna",
     ],
   },
+  {
+    slug: "mercedes-sprinter-519",
+    name: "Mercedes-Benz Sprinter 519",
+    tagline: "Prostorný minibus",
+    seats: "20 + 1",
+    image: fleetSprinter519a,
+    images: [
+      fleetSprinter519a,
+      fleetSprinter519b,
+      fleetSprinter519c,
+      fleetSprinter519d,
+      fleetSprinter519e,
+      fleetSprinter519f,
+    ],
+    description:
+      "Komfortní minibus s celovozovou klimatizací, velkým zavazadlovým prostorem a kompletní palubní výbavou.",
+    features: [
+      "20 + 1 míst",
+      "Polohovatelné sedačky",
+      "Pásy na všech sedadlech",
+      "Velký zavazadlový prostor",
+      "Závěsné zařízení",
+      "Klimatizace celovozová",
+      "Přídavné topení",
+      "TV a lednice",
+    ],
+  },
 ];
+
 
 export const priceZones = [
   { label: "1. pásmo", note: "Nájezd do 50 km" },
