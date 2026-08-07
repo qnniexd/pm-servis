@@ -113,7 +113,7 @@ export const fleet: Vehicle[] = [
   {
     slug: "isuzu-turquoise",
     name: "Isuzu Turquoise",
-    tagline: "Obratný midibus",
+    tagline: "Praktický midibus",
     seats: "28 + 1 + 1",
     image: fleetIsuzu,
     images: [fleetIsuzu, fleetIsuzu3, fleetIsuzu4, fleetIsuzu5, fleetIsuzu6],
@@ -156,7 +156,7 @@ export const fleet: Vehicle[] = [
   },
   {
     slug: "mercedes-sprinter",
-    name: "Mercedes-Benz Sprinter",
+    name: "Mercedes-Benz Sprinter 513",
     tagline: "VIP minibus",
     seats: "20 + 1",
     image: fleetSprinter,
