@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Bus, Building2, Construction, Globe, Handshake } from "lucide-react";
+import { Bus, Building2, Construction, Handshake } from "lucide-react";
 import { SiteLayout } from "@/components/SiteLayout";
 import { services } from "@/data/site";
 import serviceScaffolding from "@/assets/service-scaffolding.jpg";
@@ -11,7 +11,7 @@ export const Route = createFileRoute("/sluzby")({
       {
         name: "description",
         content:
-          "Autobusová doprava, technická správa a údržba nemovitostí, půjčovna pojízdného hliníkového lešení a tvorba webových stránek od PM-servis.",
+          "Autobusová doprava, technická správa a údržba nemovitostí a půjčovna pojízdného hliníkového lešení od PM-servis.",
       },
       { property: "og:title", content: "Služby — PM-servis" },
       {
@@ -23,7 +23,7 @@ export const Route = createFileRoute("/sluzby")({
   component: ServicesPage,
 });
 
-const icons = [Bus, Building2, Construction, Globe];
+const icons = [Bus, Building2, Construction];
 
 function ServicesPage() {
   return (
