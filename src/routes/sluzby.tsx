@@ -43,7 +43,7 @@ function ServicesPage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-16 lg:px-12 lg:py-24">
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {services.map((s, i) => {
             const Icon = icons[i];
             return (
