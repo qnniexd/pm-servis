@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 
-type Lang = "cs" | "en" | "de";
+type Lang = "cs" | "en" | "pl";
 
 const flags: Record<Lang, { title: string; src: string }> = {
   cs: { title: "Čeština", src: "https://flagcdn.com/w80/cz.png" },
   en: { title: "English", src: "https://flagcdn.com/w80/gb.png" },
-  de: { title: "Deutsch", src: "https://flagcdn.com/w80/de.png" },
+  pl: { title: "Polski", src: "https://flagcdn.com/w80/pl.png" },
 };
 
 
@@ -31,7 +31,7 @@ function currentLang(): Lang {
   const c = readCookie("googtrans");
   if (!c) return "cs";
   if (c.endsWith("/en")) return "en";
-  if (c.endsWith("/de")) return "de";
+  if (c.endsWith("/pl")) return "pl";
   return "cs";
 }
 
@@ -56,7 +56,7 @@ function ensureGoogleTranslate() {
         new TE(
           {
             pageLanguage: "cs",
-            includedLanguages: "cs,en,de",
+            includedLanguages: "cs,en,pl",
             autoDisplay: false,
             layout: TE.InlineLayout.SIMPLE,
           },
